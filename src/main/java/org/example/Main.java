@@ -16,9 +16,9 @@ public class Main {
         scanner.close();
         return width;
     }
-    static void drawRectangle(){
-        int length = getLength();
-        int width = getWidth();
+    static void drawRectangle(int length, int width){
+//        int length = getLength();
+//        int width = getWidth();
         for (int i = 0; i < length; i++) {
             if(i==0||i==length-1){
                 System.out.print(" ");
@@ -38,8 +38,10 @@ public class Main {
                 }
             System.out.println();
         }
+        scanner.close();
     }
     public static void main(String[] args) {
-       drawRectangle();
+        System.out.println("Введите длину и ширину прямоугольника");
+       drawRectangle(scanner.nextInt(), scanner.nextInt());
     }
 }
